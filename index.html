@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memory game</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Memory game</h1>
+      <div class="userInfo">
+        <form onsubmit="submitForm(event)">
+          <label>Spelare 1:</label>
+          <input type="text" id="user_1" />
+          <label>Spelare 2:</label>
+          <input type="text" id="user_2" />
+          <button class="start-btn" type="submit">Starta Spelet</button>
+        </form>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <div class="wrapper">
+      <aside class="left">
+        <div class="player_container">
+          <h2 class="left-user">Player:</h2>
+          <span class="player1"></span>
+          <h3>Score: <span class="player1Score"></span></h3>
+        </div>
+      </aside>
+
+      <aside class="right">
+        <div class="player_container">
+          <h2 class="right-user">Player:</h2>
+          <span class="player2"></span>
+          <h3>Score: <span class="player2Score"></span></h3>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main>
+        <!-- SpelPlan -->
+        <div id="board">
+          <div class="card closed c1" data-framework="c1">
+            <img class="front-face" src="img/santa-claus.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c1" data-framework="c1">
+            <img class="front-face" src="img/santa-claus.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c2" data-framework="c2">
+            <img class="front-face" src="img/bell_.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c2" data-framework="c2">
+            <img class="front-face" src="img/bell_.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c3" data-framework="c3">
+            <img class="front-face" src="img/christmas-tree.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c3" data-framework="c3">
+            <img class="front-face" src="img/christmas-tree.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c4" data-framework="c4">
+            <img class="front-face" src="img/gingerbread-man.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c4" data-framework="c4">
+            <img class="front-face" src="img/gingerbread-man.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c5" data-framework="c5">
+            <img class="front-face" src="img/penguin_.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c5" data-framework="c5">
+            <img class="front-face" src="img/penguin_.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c6" data-framework="c6">
+            <img class="front-face" src="img//snowman.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c6" data-framework="c6">
+            <img class="front-face" src="img/snowman.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c7" data-framework="c7">
+            <img class="front-face" src="img/angel_6240104.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c7" data-framework="c7">
+            <img class="front-face" src="img/angel_6240104.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c8" data-framework="c8">
+            <img class="front-face" src="img/christmas-sock.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c8" data-framework="c8">
+            <img class="front-face" src="img/christmas-sock.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c9" data-framework="c9">
+            <img class="front-face" src="img/candy-cane_9268904.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c9" data-framework="c9">
+            <img class="front-face" src="img/candy-cane_9268904.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c10" data-framework="c10">
+            <img class="front-face" src="img//christmas_1.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c10" data-framework="c10">
+            <img class="front-face" src="img/christmas_1.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c11" data-framework="c11">
+            <img class="front-face" src="img//snowglobe.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c11" data-framework="c11">
+            <img class="front-face" src="img/snowglobe.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+
+          <div class="card closed c12" data-framework="c12">
+            <img class="front-face" src="img//snowman_2363027.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+          <div class="card closed c12" data-framework="c12">
+            <img class="front-face" src="img/snowman_2363027.png" alt="" />
+            <div class="back-face"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- End of Main -->
+
+    <!-- Footer -->
+    <footer>
+      <h2>
+        Examiniationsuppgift. Frontend Utbildning KYHA by Maria Grypishyna
+      </h2>
+    </footer>
+    <!-- End of Footer -->
+  </body>
+</html>
