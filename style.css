@@ -59,6 +59,128 @@ h1 {
   grid-template-areas: "left main right";
 }
 
+/* Aside sections */
+/* Aside */
+aside {
+  grid-area: aside;
+  /* display: flex;
+  align-items: center;
+  justify-self: center; */
+}
+
+.left {
+  grid-area: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  grid-area: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring {
+  height: 15px;
+  width: 5px;
+  background-color: #c03636;
+  border: 2px solid #f99d24;
+  border-radius: 45%;
+  position: relative;
+  left: 108px;
+  top: 12px;
+}
+
+.string {
+  width: 1.5px;
+  position: relative;
+  background-color: #f99d24;
+  height: 85px;
+  left: 109.5px;
+  top: 12px;
+  margin-top: -20px;
+}
+
+.button {
+  height: 22px;
+  width: 30px;
+  background-color: #f99d24;
+  position: relative;
+  left: 95px;
+  top: 7px;
+  border-radius: 4px;
+}
+
+.red-ball {
+  background-color: #6b2f36;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 220px;
+  width: 220px;
+  position: relative;
+  /* left: 3px; */
+}
+
+.green-ball {
+  background-color: #9cd6ac;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 3px;
+}
+
+/* .player_container { */
+/* position: absolute; */
+/*  width: auto;
+  height: 10em; */
+/* display: flex;
+  flex-direction: column; */
+/* justify-content: center; */
+/*   align-items: center; */
+/* background-color: rgb(123, 136, 141, 0.5); */
+/* opacity: 0.5; */
+/* position: relative; */
+/*   border-radius: 1rem;
+  padding: 1rem;
+} */
+
+.player_container h2 {
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+.player_container h3 {
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.player1,
+.player2 {
+  font-size: 1.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.player1Score,
+.player2Score {
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  padding-left: 1rem;
+  color: #fdc70d;
+  text-shadow: 3px 3px #171717;
+}
+/* End of Aside */
+
 /* main */
 main {
   grid-area: main;
@@ -125,39 +247,39 @@ main {
 }
 
 /* Aside */
-aside {
+/* aside {
   grid-area: aside;
   display: flex;
   align-items: center;
   justify-self: center;
-}
+} */
 
-.left {
+/* .left {
   grid-area: left;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.right {
-  grid-area: right;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-}
+/* .right {
+  grid-area: right; */
+/* display: flex; */
+/* justify-content: center; */
+/* align-items: center; 
+}*/
 
-.player_container {
+/*  .player_container {
   /* position: absolute; */
-  width: auto;
-  height: 10em;
-  /* display: flex;
+/* width: auto;*/
+/*  height: 10em;*/
+/* display: flex;
   flex-direction: column; */
-  /* justify-content: center; */
+/* justify-content: center; */
 /*   align-items: center; */
-  background-color: rgb(123, 136, 141, 0.5);
+/* background-color: rgb(123, 136, 141, 0.5);
   /* opacity: 0.5; */
-  /* position: relative; */
-  border-radius: 1rem;
+/* position: relative; */
+/* border-radius: 1rem;
   padding: 1rem;
 }
 
@@ -191,6 +313,7 @@ aside {
   text-shadow: 3px 3px #171717;
 }
 /* End of Aside */
+
 /* Footer */
 footer {
   grid-area: footer;
